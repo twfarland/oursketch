@@ -1,0 +1,176 @@
+@import "./normalize.css";
+
+$cta: #0033ff;
+$cta2: #3366ff;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    padding: 58px 20px;
+    margin: 0px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+canvas {
+    background: #fff;
+    display: block;
+    margin: 0px auto;
+    cursor: crosshair;
+    border: 1px dashed #000;
+    width: 100%;
+    max-width: 800px;
+}
+
+header {
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 58px;
+    padding: 20px;
+    border-bottom: 1px dotted #000;
+    z-index: 1;
+    h1, h3 {
+        margin: 0px;
+        font-size: 1em;
+        display: inline-block;
+    }
+    h1 {
+        font-weight: 900;
+    }
+    h3 {
+        font-weight: 300;
+        color: #999;
+    }
+}
+
+h4 {
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+#ctrls {
+    position: fixed;
+    top: 58px;
+    left: 0px;
+    padding: 36px 20px;
+}
+
+@media (max-width: 1200px) {
+    #ctrls {
+        position: relative;
+        top: 0px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .DrawingDetails {
+        max-width: 200px;
+    }
+}
+
+#whiteboard {
+    padding: 36px 0px;
+}
+
+footer {
+    text-align: right;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 58px;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    background: #fff;
+    border-top: 1px dotted #000;
+    em {
+        color: #999;
+        padding-right: 10px;
+    }
+}
+
+a, a:link, a:hover, a:active, a:visited {
+    color: $cta;
+    text-decoration: none;
+}
+
+form, section {
+    max-width: 300px;
+    margin: 0px auto;
+    padding: 36px 0px;
+}
+
+button {
+    border: none;
+    background: $cta;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+    &:hover {
+        background: $cta2;
+    }
+}
+
+input[type=text], input[type=email] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #000;
+    margin-bottom: 20px;
+    &:focus {
+        outline: none;
+        border-bottom: 1px dashed $cta;
+        color: $cta;
+    }
+}
+
+input[type=number], input[type=color] {
+    max-width: 50px;
+}
+
+fieldset {
+    padding: 5px 0px;
+    margin: 0px;
+    border: none;
+}
+
+label {
+    display: block;
+    padding: 5px 0px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+p {
+    padding: 0px 0px 20px 0px;
+    line-height: 1.4em;
+    color: #333;
+    font-size: 0.9em;
+}
+
+ul {
+    margin: 0px;
+    padding: 20px 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.error {
+    padding: 20px;
+    color: #ff0000;
+}
+
